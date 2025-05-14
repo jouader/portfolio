@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="hsl(207, 90%, 61%)">
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/img/icons8-person-32.png" type="image/x-icon">
+
+  <!--=============== REMIX ICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <title>JOUADER - Portfolio</title>
+</head>
+
+<body>
+  <!--=============== POP UP ===============-->
+
+
+  <!--=============== HEADER PROFILE ===============-->
+  <header class="profile container">
+    <!-- Theme Button-->
+    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+    <div class="profile__container grid">
+      <div class="profile__data">
+        <div class="profile__border">
+          <div class="profile__perfil">
+            <!-- PROFILE IMAGE -->
+            <img src="assets/img/me.png" alt="profile">
+          </div>
+        </div>
+        <!-- PROFILE NAME -->
+        <h2 class="profile__name">
+          Mohammed JOUADER
+        </h2>
+        <h3 class="profile__profession">
+          Portfolio
+        </h3>
+        <ul class="profile__social">
+          <a href="https://www.instagram.com/jou4der?igsh=Ynl1azJveXZnM255&utm_source=qr" target="_blank"
+            class="profile__social-link">
+            <i class="ri-instagram-line">
+
+            </i>
+          </a>
+          <a href="https://www.facebook.com/p/Med-Jouader-100027768755206/" target="_blank"
+            class="profile__social-link">
+            <i class="ri-facebook-box-line">
+
+            </i>
+          </a>
+          <a href="https://t.me/jou4der" target="_blank" class="profile__social-link">
+            <i class="ri-telegram-line">
+
+            </i>
+          </a>
+        </ul>
+      </div>
+
+      <div class="profile__info"> <!-- <div class="profile__info grid"> -->
+        <!--
+        <div class="profile__info-group">
+          <h3 class="profile__info-number">
+            Developer
+          </h3>
+          <p class="profile__info-description">
+            front end &<br>back end
+          </p>
+        </div>
+        -->
+        <div class="profile__info-group">
+          <h3 class="profile__info-number">
+            Technicien
+          </h3>
+          <p class="profile__info-description">
+            Electricité de Maintenance Industrielle
+          </p>
+        </div>
+        <!--
+        <div class="profile__info-group">
+          <h3 class="profile__info-number">
+            Editor
+          </h3>
+          <p class="profile__info-description">
+            2d design <br> & <br> 3d design
+          </p>
+        </div>
+        -->
+      </div>
+
+      <div class="profile__buttons">
+        <!-- DOWNLOAD CV -->
+        <a download="" href="assets/pdf/note.pdf" class="button">
+          Télécharger CV <i class="ri-download-line"></i>
+        </a>
+
+        <div class="profile__buttons-small">
+          <a href="https://api.whatsapp.com/send?phone=212657039510&text=hi!" target="_blank"
+            class="button button__small button__gray">
+            <i class="ri-whatsapp-line"></i>
+          </a>
+          <a href="#" target="_blank" class="button button__small button__gray">
+            <i class="ri-messenger-line"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--=============== MAIN ===============-->
+  <main class="main">
+    <section class="filters container">
+      <!--=============== FILTERS TABS ===============-->
+      <ul class="filters__content">
+        <button class="filters__button filter-tab-active" data-target="#projects">
+          Projets
+        </button>
+
+        <button class="filters__button" data-target="#skills">
+          Compétences
+        </button>
+      </ul>
+
+      <div class="filters__sections">
+        <!--=============== PROJECTS ===============-->
+        <div class="projects__content grid filters__active" data-content id="projects">
+
+
+          <!--Compteurs asynchrones-->
+
+          <article class="projects__card">
+            <img src="assets/img/compteur.jpg" alt="Projet N2" class="projects__img">
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Electronics</span>
+                <h3 class="projects__title">Compteurs asynchrones</h3>
+                <a href="CompteursAsynchrones/index.html" target="_blank" class="projects__button button button__small">
+                <i class="ri-link"></i>
+                <!-- <i class="ri-lock-2-line"></i> Temporary Locked -->
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <!--ChronoParc-->
+
+          <article class="projects__card">
+            <img src="assets/img/timer.jpg" alt="Project N3" class="projects__img">
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Automatisation</span>
+                <h3 class="projects__title">ChronoParc</h3>
+                <a href="ChronoParc/index.html" target="_blank" class="projects__button button button__small">
+                  <i class="ri-link"></i>
+                  <!-- <i class="ri-lock-2-line"></i> Temporary Locked -->
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!--Irrigation System-->
+
+          <article class="projects__card">
+            <img src="assets/img/irrigation.jpg" alt="Projet N1" class="projects__img">
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Iot</span>
+                <h3 class="projects__title">Irrigation système</h3>
+                <a href="#" class="projects__button button button__small">
+                  <!-- <a href="#" target="_blank" class="projects__button button button__small"> -->
+                  <!-- <i class="ri-link"></i> -->
+                  <i class="ri-lock-2-line"></i> <!-- Temporary Locked -->
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+
+        <!--=============== SKILLS ===============-->
+        <div class="skills__content " data-content id="skills">
+          <div class="skills__area">
+            <h3 class="skills__title">
+              Compétences techniques
+            </h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+                  <div>
+                    <h3 class="skills__name">Maintenance industrielle <br></h3>
+                    <span class="skills__level">• Lecture et interprétation de schémas électriques <br></span>
+                    <span class="skills__level">• Dépannage de systèmes électromécaniques <br></span>
+                    <span class="skills__level">• Maintenance préventive et corrective <br></span>
+                    <span class="skills__level">• Câblage d’armoires électriques <br></span>
+                    <span class="skills__level">• Connaissances de base en pneumatique et hydraulique <br></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+                  <div>
+                    <h3 class="skills__name">Automatisation</h3>
+                    <span class="skills__level">• Programmation des API (S7-300 / S7-1200) <br></span>
+                    <span class="skills__level">• Utilisation des logiciels TIA Portal / STEP7 <br></span>
+                    <span class="skills__level">• Programmation en Ladder et Grafcet <br></span>
+                    <span class="skills__level">• Simulation avec Automation Studio et Proteus <br></span>
+                    <span class="skills__level">• Programmation d'Arduino <br></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="skills__area">
+            <h3 class="skills__title">
+              Compétences numériques
+            </h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+                  <div>
+                    <h3 class="skills__name">Programmation générale</h3>
+                    <span class="skills__level">• Python (niveau avancé) <br></span>
+                    <span class="skills__level">• C++ (niveau intermédiaire) <br></span>
+                    <span class="skills__level">• HTML / CSS (niveau intermédiaire) <br></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+                  <div>
+                    <h3 class="skills__name">Montage et création 3D </h3>
+                    <span class="skills__level">• Montage vidéo avec Adobe Premiere Pro <br></span>
+                    <span class="skills__level">• Animation et effets spéciaux avec After Effects <br></span>
+                    <span class="skills__level">• Modélisation, texturing et animation 3D avec Blender <br></span>
+                    <span class="skills__level">• Compositing, éclairage et rendu final pour projets visuels <br></span>
+                    <span class="skills__level">• Exportation optimisée pour vidéo et supports numériques <br></span>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer container">
+    <span class="footer__copy">
+      &#169; Mohammed Jouader. All rigths reserved
+    </span>
+  </footer>
+
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="assets/js/scrollreveal.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

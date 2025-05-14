@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/img/icons8-person-32.png" type="image/x-icon">
+  <title>JOUADER - Bateau</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #d9e4f5);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      color: #00796b;
+      margin: 30px 0 10px;
+      font-size: 2rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+    .boat-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    .boat-info {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 180px;
+    }
+    .boat {
+      width: 100%;
+      height: 45px;
+      font-size: 16px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s;
+    }
+    .available {
+      background-color: #9e9e9e;
+    }
+    .in-use {
+      background-color: #43a047;
+    }
+    .time-up {
+      background-color: #e53935;
+    }
+    .boat:hover {
+      opacity: 0.9;
+    }
+    .timer, .start-time {
+      font-size: 14px;
+      color: #333;
+      margin: 4px 0;
+    }
+    .cancel-btn {
+      background-color: #fbc02d;
+      border: none;
+      color: #333;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .cancel-btn:hover {
+      background-color: #f9a825;
+    }
+    .controls {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+    .controls input {
+      padding: 8px;
+      font-size: 16px;
+      width: 100px;
+      margin-top: 10px;
+    }
+    .controls button {
+      background-color: #039be5;
+      color: white;
+      padding: 10px 18px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .controls button:hover {
+      background-color: #0288d1;
+    }
+    a {
+      background-color: #ef5350;
+      color: white;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    a:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <h1>Minuteur des Bateaux</h1>
+  <div class="container">
+    <div class="boat-container">
+      <!-- Répéter pour chaque bateau -->
+      <div class="boat-info">
+        <button class="boat available" id="boat1" onclick="startSession(1)">Bateau 1</button>
+        <div class="timer" id="timer1">00:00</div>
+        <div class="start-time" id="start1"></div>
+        <button class="cancel-btn" onclick="cancelSession(1)">Annuler</button>
+      </div>
+      <div class="boat-info">
+        <button class="boat available" id="boat2" onclick="startSession(2)">Bateau 2</button>
+        <div class="timer" id="timer2">00:00</div>
+        <div class="start-time" id="start2"></div>
+        <button class="cancel-btn" onclick="cancelSession(2)">Annuler</button>
+      </div>
+      <div class="boat-info">
+        <button class="boat available" id="boat3" onclick="startSession(3)">Bateau 3</button>
+        <div class="timer" id="timer3">00:00</div>
+        <div class="start-time" id="start3"></div>
+        <button class="cancel-btn" onclick="cancelSession(3)">Annuler</button>
+      </div>
+      <div class="boat-info">
+        <button class="boat available" id="boat4" onclick="startSession(4)">Bateau 4</button>
+        <div class="timer" id="timer4">00:00</div>
+        <div class="start-time" id="start4"></div>
+        <button class="cancel-btn" onclick="cancelSession(4)">Annuler</button>
+      </div>
+      <div class="boat-info">
+        <button class="boat available" id="boat5" onclick="startSession(5)">Bateau 5</button>
+        <div class="timer" id="timer5">00:00</div>
+        <div class="start-time" id="start5"></div>
+        <button class="cancel-btn" onclick="cancelSession(5)">Annuler</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label for="sessionDuration">Durée d'une session (minutes) :</label><br>
+      <input type="number" id="sessionDuration" value="10" min="1" max="60">
+      <button onclick="updateSessionDuration()">Mettre à jour</button>
+    </div>
+
+    <a href="index.html">Retour</a>
+  </div>
+
+  <script>
+    let boatStates = {1: 'available', 2: 'available', 3: 'available', 4: 'available', 5: 'available'};
+    let timers = {};
+    let sessionDuration = 10 * 60; // durée en secondes
+
+    function startSession(boat) {
+      if (boatStates[boat] === 'available') {
+        boatStates[boat] = 'in-use';
+        let remainingTime = sessionDuration;
+        document.getElementById(`boat${boat}`).className = 'boat in-use';
+
+        const now = new Date();
+        document.getElementById(`start${boat}`).innerText = `Début : ${now.toLocaleTimeString('fr-FR')}`;
+        startTimer(boat, remainingTime);
+      }
+    }
+
+    function cancelSession(boat) {
+      if (boatStates[boat] !== 'available') {
+        boatStates[boat] = 'available';
+        clearInterval(timers[boat]);
+        document.getElementById(`boat${boat}`).className = 'boat available';
+        document.getElementById(`timer${boat}`).innerText = '00:00';
+        document.getElementById(`start${boat}`).innerText = '';
+      }
+    }
+
+    function startTimer(boat, timeLeft) {
+      clearInterval(timers[boat]);
+      const timerElement = document.getElementById(`timer${boat}`);
+      timers[boat] = setInterval(() => {
+        if (timeLeft <= 0) {
+          clearInterval(timers[boat]);
+          boatStates[boat] = 'time-up';
+          document.getElementById(`boat${boat}`).className = 'boat time-up';
+        } else {
+          let min = Math.floor(timeLeft / 60);
+          let sec = timeLeft % 60;
+          timerElement.innerText = `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+          timeLeft--;
+        }
+      }, 1000);
+    }
+
+    function updateSessionDuration() {
+      const newDuration = document.getElementById('sessionDuration').value;
+      sessionDuration = parseInt(newDuration) * 60;
+    }
+  </script>
+</body>
+</html>
