@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Système d'Irrigation Automatique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            margin-top: 15px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        ul {
+            line-height: 1.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Projet : Système d'Irrigation Automatique avec Arduino & Bluetooth</h1>
+
+        <div class="section">
+            <h2>🔍 Description du Projet</h2>
+            <p>
+                Ce projet permet de contrôler une pompe à eau automatiquement grâce à un capteur d'humidité du sol.
+                Il utilise un Arduino Uno, un module Bluetooth (JDY-08), un relais, et une pompe à eau 5V.
+                L'utilisateur peut aussi activer manuellement la pompe via une application mobile Bluetooth.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🧰 Matériel Utilisé</h2>
+            <ul>
+                <li>Arduino Uno</li>
+                <li>Module Bluetooth JDY-08</li>
+                <li>Capteur d'humidité du sol</li>
+                <li>Relais 5V</li>
+                <li>POMPE à eau 5V</li>
+                <li>Breadboard et câbles Dupont</li>
+                <li>Resistances, LEDs, Buzzer</li>
+                <li>Alimentation</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔌 Schéma de Connexion</h2>
+            <img src="chemin/vers/ton_image_schema.jpg" alt="Schéma de câblage du projet">
+        </div>
+
+        <div class="section">
+            <h2>⚙️ Fonctionnement</h2>
+            <p>
+                Lorsque l'humidité du sol est inférieure à un certain seuil, le système active automatiquement le relais,
+                qui alimente la pompe. En parallèle, l'utilisateur peut également déclencher ou arrêter la pompe via une
+                application mobile connectée au module Bluetooth.
+            </p>
+            <img src="chemin/vers/ton_image_systeme.jpg" alt="Photo du système final">
+        </div>
+
+        <div class="section">
+            <h2>🎬 Vidéo de démonstration</h2>
+            <iframe src="https://www.youtube.com/embed/TON_ID_VIDEO" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="section">
+            <h2>📌 Conclusion</h2>
+            <p>
+                Ce projet démontre une solution simple mais efficace pour automatiser le processus d'irrigation.
+                Il est adapté aux jardins domestiques, serres ou projets éducatifs en électronique embarquée.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

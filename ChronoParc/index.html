@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/img/icons8-person-32.png" type="image/x-icon">
+  <title>JOUADER - ChronoParc</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #f0f4f8, #d9e4f5);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.2em;
+      color: #2c3e50;
+    }
+
+    .description {
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 1.1em;
+      color: #555;
+      padding: 0 15px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      gap: 20px;
+    }
+
+    .game-option {
+      width: 250px;
+      height: 60px;
+      font-size: 18px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .game-option:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ChronoParc</h1>
+
+  <div class="description">
+    Ce système permet de gérer automatiquement le temps de jeu des enfants dans un parc. Il évite les conflits avec les parents en affichant clairement quand le tour d’un enfant est terminé.  
+    Choisissez un jeu ci-dessous pour démarrer un minuteur.
+  </div>
+
+  <div class="container">
+    <a class="game-option" href="Trampoline.html">🟢 Minuteur Trampoline</a>
+    <a class="game-option" href="Bateau.html">🔵 Minuteur Bateau</a>
+  </div>
+
+  <div class="footer">
+    Développé pour le système de gestion du parc pour enfants © 2024
+  </div>
+
+</body>
+</html>
