@@ -123,15 +123,12 @@
         <section>
             <h2>Présentation du Projet</h2>
             <p>
-                Ce projet consiste à concevoir un <strong>compteur asynchrone</strong> à l’aide de circuits logiques de
-                base.
-                Un compteur asynchrone est un circuit séquentiel qui compte des impulsions sans que tous ses éléments
-                internes soient synchronisés par la même horloge.
-            </p>
-            <p>
-                L’objectif est de comprendre son fonctionnement, de le réaliser progressivement, et d’ajouter des
-                extensions comme l’affichage numérique et la signalisation.
-            </p>
+    Ce projet avait pour objectif de concevoir un <strong>compteur asynchrone modulo 10</strong>, capable de compter de 0 à 9, en utilisant des circuits logiques de base.
+    Un compteur asynchrone est un circuit séquentiel dans lequel les bascules ne sont pas déclenchées simultanément par la même horloge, ce qui peut entraîner un léger décalage dans les transitions d'état.
+</p>
+<p>
+    Le projet visait à comprendre le fonctionnement de ce type de compteur, à le réaliser progressivement, et à intégrer un <strong>afficheur 7 segments</strong> pour visualiser les états comptés.
+</p>
 
             <h3>Matériel utilisé :</h3>
             <ul>
@@ -156,10 +153,10 @@
                 poussoirs reliés à un décodeur BCD (7447),
                 qui contrôle un afficheur 7 segments.
             </p>
+            <img src="assets/images/img1.jpg" alt="Afficheur 7 segments test">
             <video autoplay muted loop playsinline>
                 <source src="assets/videos/IMG_7225.MOV" type="video/mp4" />
             </video>
-            <img src="assets/images/img1.jpg" alt="Afficheur 7 segments test">
 
             <h3>2. Réalisation d’un compteur Modulo 8</h3>
             <p>
@@ -178,7 +175,7 @@
                 Pour limiter le comptage à 10 (de 0 à 9), une porte NAND a été ajoutée pour détecter l’état 10 (en
                 binaire)
                 et réinitialiser automatiquement le compteur. Cette porte a été construite manuellement à l’aide de
-                transistors.
+                transistors NPN.
             </p>
             <img src="assets/images/imh5.jpg" alt="Montage avec porte NAND pour limite à 10">
 
