@@ -170,12 +170,9 @@
                 <source src="assets/videos/IMG_7249.MOV" type="video/mp4" />
             </video>
 
-            <h3>3. Compteur limité à 10 (Modulo 15 tronqué)</h3>
+            <h3>3. Compteur limité à 10 (Modulo 16 tronqué)</h3>
             <p>
-                Pour limiter le comptage à 10 (de 0 à 9), une porte NAND a été ajoutée pour détecter l’état 10 (en
-                binaire)
-                et réinitialiser automatiquement le compteur. Cette porte a été construite manuellement à l’aide de
-                transistors NPN.
+                Le compteur, initialement configuré en modulo 8 (comptant de 0 à 7 avec trois bascules), a été étendu à modulo 16 par l’ajout d’une quatrième bascule, mais afin d’afficher uniquement les chiffres de 0 à 9 sur un afficheur 7 segments à un seul chiffre, le comptage a été volontairement limité à 10 en intégrant une porte logique NAND qui détecte l’état binaire 1010 (10 en décimal) et génère un signal de remise à zéro automatique, cette porte NAND ayant été réalisée manuellement à l’aide de transistors NPN.
             </p>
             <img src="assets/images/imh5.jpg" alt="Montage avec porte NAND pour limite à 10">
 
