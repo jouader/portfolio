@@ -36,7 +36,7 @@
           </div>
         </div>
         <!-- PROFILE NAME -->
-        <h2 class="profile__name">
+        <h2 id="name" class="profile__name">
           Mohammed JOUADER
         </h2>
         <h3 class="profile__profession">
@@ -295,6 +295,15 @@
 
   <!--=============== MAIN JS ===============-->
   <script src="assets/js/main.js"></script>
+  <script>
+  const userLang = navigator.language || navigator.userLanguage;
+  const nameElement = document.getElementById("name");
+
+  // If the user's language is Arabic, show the Arabic name
+  if (userLang.startsWith("ar")) {
+    nameElement.textContent = "محمد جوادر";
+  }
+</script>
 </body>
 
 </html>
