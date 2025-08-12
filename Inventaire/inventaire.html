@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/img/icons8-person-32.png" type="image/x-icon">
+    <title>JOUADER - Gestionnaire d'Inventaire</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f8fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #1976d2, #1565c0);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        header p {
+            margin-top: 8px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #1565c0;
+            border-left: 5px solid #1565c0;
+            padding-left: 10px;
+        }
+        .screenshot {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .gallery img {
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        ul {
+            line-height: 1.8;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tech {
+            background-color: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-weight: bold;
+            color: #1565c0;
+            font-size: 0.95rem;
+        }
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-left: 4px solid #1565c0;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #f0f4f8;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📦 Gestionnaire d'Inventaire Électronique</h1>
+    <p>Application personnelle avancée pour la gestion et le suivi des composants électroniques</p>
+</header>
+
+<section>
+    <h2>Présentation</h2>
+    <p>
+        Ce projet est né d’un besoin personnel : organiser et suivre mes composants électroniques 
+        de manière efficace. J’ai conçu et développé moi-même cette application en <em>Python</em> 
+        avec <strong>PySide6 (Qt for Python)</strong>, en intégrant des fonctionnalités dignes 
+        d’un outil professionnel pour gérer un inventaire complet.
+    </p>
+
+    <div class="highlight">
+        <strong>Échelle du projet :</strong> Application complète avec sauvegarde des données, 
+        import/export, recherche avancée, statistiques en temps réel et génération de rapports professionnels.
+    </div>
+
+    <div class="screenshot">
+        <img src="assets/main-interface.jpg" alt="Interface principale">
+        <p><em>Interface principale – claire, moderne et facile à utiliser</em></p>
+    </div>
+
+    <div class="gallery">
+        <div>
+            <img src="assets/add-component-dialog.jpg" alt="Ajout de composant">
+            <p><em>Formulaire d'ajoute – simple et rapide</em></p>
+        </div>
+        <div>
+            <img src="assets/excel-import.jpg" alt="Import Excel">
+            <p><em>Import Excel – chargement massif de données existantes</em></p>
+        </div>
+        <div>
+            <img src="assets/pdf-excel-export.jpg" alt="Export PDF Excel">
+            <p><em>Export PDF / Excel – rapport professionnel</em></p>
+        </div>
+        <div>
+            <img src="assets/recherche.jpg" alt="recherche">
+            <p><em>Recherche intelligente – Cherche dans toutes les colonnes.</em></p>
+        </div>
+    </div>
+
+    <h2>Fonctionnalités principales</h2>
+    <ul>
+        <li>➕ <strong>Ajouter des composants</strong> – Formulaire pour saisir nom, quantité, catégorie et notes.</li>
+        <li>➖ <strong>Supprimer des composants</strong> – Retirer facilement les éléments obsolètes ou inutiles.</li>
+        <li>⬆ <strong>Importer depuis un fichier Excel</strong> – Charger un inventaire complet depuis un tableur.</li>
+        <li>⬇ <strong>Exporter en Excel ou PDF</strong> – Générer des rapports professionnels pour archivage ou partage.</li>
+        <li>🔍 <strong>Recherche avancée</strong> – Système de recherche qui parcourt toute la table pour trouver un composant rapidement.</li>
+        <li>↕ <strong>Tri intelligent</strong> – Classer par nom, quantité, catégorie ou note.</li>
+        <li>📊 <strong>Statistiques globales</strong> – Affiche nombre total de composants, catégories et quantité totale.</li>
+        <li>💾 <strong>Sauvegarde automatique</strong> – Les données sont enregistrées et restaurées automatiquement.</li>
+        <li>🎨 <strong>Interface moderne</strong> – Design clair, ergonomique et agréable à utiliser.</li>
+    </ul>
+
+    <h2>Technologies utilisées</h2>
+    <div class="tech-stack">
+        <div class="tech">Python 3</div>
+        <div class="tech">PySide6 (Qt for Python)</div>
+        <div class="tech">Pandas</div>
+        <div class="tech">ReportLab</div>
+        <div class="tech">JSON</div>
+        <div class="tech">Excel (Import/Export)</div>
+    </div>
+
+    <h2>Détails techniques</h2>
+    <ul>
+        <li>Utilisation de <strong>QTableWidget</strong> pour un affichage dynamique et triable.</li>
+        <li>Boîtes de dialogue personnalisées avec validation des champs.</li>
+        <li>Export PDF avec <strong>ReportLab</strong> pour gérer les inventaires volumineux.</li>
+        <li>Lecture/écriture Excel via <strong>Pandas</strong> pour une compatibilité maximale.</li>
+        <li>Sauvegarde des données en <strong>JSON</strong> dans le dossier utilisateur.</li>
+        <li>Compatible <strong>PyInstaller</strong> pour création d’exécutables autonomes.</li>
+    </ul>
+
+    <h2>Cas d'utilisation</h2>
+    <ul>
+        <li>Gestion personnelle de mes propres composants électroniques.</li>
+        <li>Passionnés suivant leur collection de composants.</li>
+        <li>Laboratoires éducatifs organisant leur matériel pédagogique.</li>
+        <li>Petites équipes de production maintenant leur stock projet.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2025/08 — Réalisé par Mohammed JOUADER </p>
+</footer>
+
+</body>
+</html>
